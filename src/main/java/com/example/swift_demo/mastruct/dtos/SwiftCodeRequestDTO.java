@@ -28,4 +28,6 @@ public class SwiftCodeRequestDTO {
     private String countryName;
 
     private String countryCode;
+
+    private boolean isHeadquarter;
 }
