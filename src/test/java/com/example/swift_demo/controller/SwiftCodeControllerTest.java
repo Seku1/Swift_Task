@@ -89,7 +89,7 @@ class SwiftCodeControllerTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.swiftCode", is("ABCDUSXXX")))
                 .andExpect(jsonPath("$.bankName", is("TEST BANK")))
-                .andExpect(jsonPath("$.headquarter", is(true)))  // Changed from "isHeadquarter" to "headquarter"
+                .andExpect(jsonPath("$.headquarter", is(true)))
                 .andExpect(jsonPath("$.branches", hasSize(1)))
                 .andExpect(jsonPath("$.branches[0].swiftCode", is("ABCDUS33")));
 
