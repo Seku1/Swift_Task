@@ -22,7 +22,12 @@ public class CountryServiceImpl implements CountryService {
     @Override
     public Country getOrCreateCountry(String iso2, String name) {
         return countryRepository.findById(iso2)
-                .orElseGet(() -> countryRepository.save(new Country(iso2, name)));
+                .orElseGet(() -> {
+                    Country country = new Country();
+                    country.setIso2(iso2);
+                    country.setName(name);
+                    return countryRepository.save(country);
+                });
     }
 
     @Override

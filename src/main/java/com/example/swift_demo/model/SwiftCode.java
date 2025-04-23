@@ -18,7 +18,8 @@ public class SwiftCode {
 
     private String address;
 
-    private boolean isHeadquarter;
+    // Lombok generates isHeadquarter() getter for this field
+    private boolean headquarter;  // Changed from isHeadquarter for consistency
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "country_iso2", nullable = false)
@@ -30,8 +31,8 @@ public class SwiftCode {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "headquarter_id")
-    private SwiftCode headquarter;
+    private SwiftCode headquarterSwiftCode;  // Renamed to avoid conflict
 
     @OneToMany
-    private List<SwiftCode> branches =  new ArrayList<>();
+    private List<SwiftCode> branches = new ArrayList<>();
 }

@@ -23,4 +23,9 @@ public class Country {
 
     @OneToMany(mappedBy = "country")
     private List<SwiftCode> swiftCodes;
+
+    public Country(String iso2, String name) {
+        this.iso2 = iso2;
+        this.name = name;
+    }
 }

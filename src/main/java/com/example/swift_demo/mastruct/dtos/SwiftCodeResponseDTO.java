@@ -1,7 +1,5 @@
 package com.example.swift_demo.mastruct.dtos;
 
-
-import com.example.swift_demo.model.SwiftCode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
